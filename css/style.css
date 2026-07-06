@@ -1153,8 +1153,15 @@ footer {
 }
 
 
-/* Adsterra Leaderboard Banner Wrapper with Skeleton Shimmer */
-.adsterra-banner-wrapper {
+
+@media (max-width: 768px) {
+    .adsterra-banner-wrapper {
+        display: none;
+    }
+}
+
+/* Adsterra Banner 728x90 with Shimmer */
+.adsterra-banner-728x90 {
     margin: 2.5rem auto;
     max-width: 100%;
     width: 728px;
@@ -1171,8 +1178,28 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
 }
+
+/* Adsterra Banner 300x250 with Shimmer */
+.adsterra-banner-300x250 {
+    margin: 2rem auto;
+    max-width: 100%;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    clear: both;
+    border-radius: 12px;
+    background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite linear;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
 @media (max-width: 768px) {
-    .adsterra-banner-wrapper {
+    .adsterra-banner-728x90 {
         display: none;
     }
 }
