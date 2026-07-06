@@ -1151,3 +1151,22 @@ footer {
         display: none;
     }
 }
+
+
+/* Adsterra Leaderboard Banner Wrapper */
+.adsterra-banner-wrapper {
+    margin: 2.5rem auto;
+    max-width: 100%;
+    width: 728px;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    clear: both;
+}
+@media (max-width: 768px) {
+    .adsterra-banner-wrapper {
+        display: none;
+    }
+}
