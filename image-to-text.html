@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD0TFB7QFN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RD0TFB7QFN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Text OCR Online - Extract Text from Images Privately - PyraTools</title>
+    <meta name="description" content="Extract editable text from images, photos, and scanned documents instantly. Free online client-side OCR using Tesseract.js. No files uploaded.">
+    <link rel="canonical" href="https://pyratools.com/image-to-text.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Image to Text OCR Online - Extract Text from Images Privately">
+    <meta property="og:description" content="Extract editable text from images, photos, and scanned documents. Fully private OCR.">
+    <meta property="og:url" content="https://pyratools.com/image-to-text.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tesseract.js OCR CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.3/dist/tesseract.min.js"></script>
+    
+    <!-- SEO JSON-LD Markup Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PyraTools Image to Text OCR",
+      "operatingSystem": "All",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234f46e5%22%20/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%239333ea%22%20/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20Gradient%20Triangle%20--%3E%0A%20%20%3Cpolygon%20points%3D%2250%2C12%2090%2C82%2010%2C82%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20White%20Eye%20shape%20cutout%20--%3E%0A%20%20%3Cpath%20d%3D%22M%2030%2C58%20Q%2050%2C40%2070%2C58%20Q%2050%2C76%2030%2C58%20Z%22%20fill%3D%22%23ffffff%22%20/%3E%0A%20%20%3C%21--%20Pupil%20using%20the%20same%20gradient%20--%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2258%22%20r%3D%226.5%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20Small%20white%20shine%20reflection%20inside%20pupil%20--%3E%0A%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2256%22%20r%3D%222%22%20fill%3D%22%23ffffff%22%20/%3E%0A%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Pyra<span>Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="image-compressor.html">Compressor</a></li>
+                <li><a href="heic-to-jpg.html">HEIC Converter</a></li>
+                <li><a href="image-to-pdf.html">Images to PDF</a></li>
+                <li><a href="fancy-fonts.html">Fonts Style</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main>
+        <div class="tool-workspace">
+            <div class="workspace-card">
+                <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center;">Image to Text OCR</h1>
+                <p style="color: var(--text-muted); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;">Extract editable text characters from photos or scanned documents locally in your browser.</p>
+
+                <!-- Drag and Drop Zone -->
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-zone-icon">🔍</span>
+                    <p class="drop-zone-text">Drag & drop your image here or click to browse</p>
+                    <p class="drop-zone-subtext">Supports PNG, JPG, JPEG, and WebP (Max 10MB)</p>
+                    <input type="file" id="file-input" class="file-input" accept="image/png, image/jpeg, image/webp">
+                </div>
+
+                <!-- Controls Panel -->
+                <div class="controls-panel" id="controls-panel" style="display: none;">
+                    <button class="btn btn-primary" id="ocr-btn">Extract Text from Image</button>
+                </div>
+
+                <!-- Files List Previews -->
+                <div class="files-list" id="files-list"></div>
+
+                <!-- Progress Loading Bar -->
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-status" id="progress-status">Initializing OCR Engine...</div>
+
+                <!-- Results Output Panel -->
+                <div class="result-panel" id="result-panel" style="display: none;">
+                    <div class="result-header">
+                        <h4 class="result-title" style="color: var(--primary);">📝 Extracted Text:</h4>
+                        <button class="copy-btn" id="copy-text-btn">Copy Text to Clipboard</button>
+                    </div>
+                    
+                    <div class="text-area-wrapper">
+                        <textarea id="extracted-text" class="textarea-custom" aria-label="Extracted Text"></textarea>
+                        <div class="text-stats">
+                            <span>Words: <strong id="word-count">0</strong></span>
+                            <span>Characters: <strong id="char-count">0</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inline Monetag Banner Ad Placeholder -->
+        <div class="ad-slot-wrapper">
+            <div class="ad-container-banner" id="ad-ocr-banner">
+                <!-- Monetag Code -->
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Image to Text OCR FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">What is client-side OCR?</div>
+                    <div class="faq-answer">
+                        OCR stands for Optical Character Recognition. It's a technology that extracts text from images. By utilizing Tesseract.js (an open-source JavaScript port of Tesseract OCR engine) running via Web Workers inside your browser, we can extract text entirely locally without uploading anything online.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">What languages are supported?</div>
+                    <div class="faq-answer">
+                        By default, this tool is configured for English text extraction. It downloads the English trained data file temporarily into your browser's Cache Storage so that subsequent runs are immediate.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can I get the best text extraction results?</div>
+                    <div class="faq-answer">
+                        For accurate OCR:
+                        1. Ensure the image has high contrast (dark text on light backgrounds).
+                        2. Avoid blurry or distorted photographs.
+                        3. Make sure the text is horizontal and not rotated.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <p>&copy; 2026 PyraTools. All rights reserved.</p>
+            <p><a href="index.html">Back to Home Dashboard</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/image-to-text.js"></script>
+</body>
+</html>

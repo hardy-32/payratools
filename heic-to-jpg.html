@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD0TFB7QFN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RD0TFB7QFN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert HEIC to JPG Online - 100% Private Apple Photo Converter - PyraTools</title>
+    <meta name="description" content="Convert Apple HEIC photos to JPG or PNG instantly in your browser. Free, private, client-side converter with bulk conversion support. No files uploaded.">
+    <link rel="canonical" href="https://pyratools.com/heic-to-jpg.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Convert HEIC to JPG Online - 100% Private Apple Photo Converter">
+    <meta property="og:description" content="Free online HEIC to JPG converter. Process your Apple iPhone photos directly inside your browser. Complete privacy.">
+    <meta property="og:url" content="https://pyratools.com/heic-to-jpg.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CDN library for HEIC conversion -->
+    <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+    
+    <!-- SEO JSON-LD Markup Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PyraTools HEIC to JPG Converter",
+      "operatingSystem": "All",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234f46e5%22%20/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%239333ea%22%20/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20Gradient%20Triangle%20--%3E%0A%20%20%3Cpolygon%20points%3D%2250%2C12%2090%2C82%2010%2C82%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20White%20Eye%20shape%20cutout%20--%3E%0A%20%20%3Cpath%20d%3D%22M%2030%2C58%20Q%2050%2C40%2070%2C58%20Q%2050%2C76%2030%2C58%20Z%22%20fill%3D%22%23ffffff%22%20/%3E%0A%20%20%3C%21--%20Pupil%20using%20the%20same%20gradient%20--%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2258%22%20r%3D%226.5%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20Small%20white%20shine%20reflection%20inside%20pupil%20--%3E%0A%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2256%22%20r%3D%222%22%20fill%3D%22%23ffffff%22%20/%3E%0A%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Pyra<span>Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="image-compressor.html">Compressor</a></li>
+                <li><a href="heic-to-jpg.html" class="active">HEIC Converter</a></li>
+                <li><a href="image-to-pdf.html">Images to PDF</a></li>
+                <li><a href="fancy-fonts.html">Fonts Style</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main>
+        <div class="tool-workspace">
+            <div class="workspace-card">
+                <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center;">HEIC to JPG/PNG Converter</h1>
+                <p style="color: var(--text-muted); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;">Convert iPhone .heic files to high-quality JPG or PNG locally in your browser.</p>
+
+                <!-- Drag and Drop Zone -->
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-zone-icon">📷</span>
+                    <p class="drop-zone-text">Drag & drop your Apple HEIC files here or click to browse</p>
+                    <p class="drop-zone-subtext">Supports .heic or .heif image extensions (Max 15MB each)</p>
+                    <input type="file" id="file-input" class="file-input" accept=".heic,.heif" multiple>
+                </div>
+
+                <!-- Controls Panel -->
+                <div class="controls-panel" id="controls-panel" style="display: none;">
+                    <div class="control-row">
+                        <div class="control-group">
+                            <label for="output-format">Select Output Format:</label>
+                            <select id="output-format" class="control-select">
+                                <option value="image/jpeg">Convert to JPG/JPEG</option>
+                                <option value="image/png">Convert to PNG</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="quality-range">Compression Quality: <span class="range-val" id="quality-val">85%</span></label>
+                            <input type="range" id="quality-range" min="10" max="100" value="85">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="convert-btn" style="margin-top: 1rem;">Convert HEIC Files</button>
+                </div>
+
+                <!-- Files List Previews -->
+                <div class="files-list" id="files-list"></div>
+
+                <!-- Progress Loading Bar -->
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-status" id="progress-status">Processing...</div>
+
+                <!-- Results Output Panel -->
+                <div class="result-panel" id="result-panel" style="display: none;">
+                    <div class="result-header">
+                        <h4 class="result-title">🎉 Conversion Complete!</h4>
+                        <button class="copy-btn" id="download-all-btn">Download All Converted Images</button>
+                    </div>
+                    <p id="conversion-summary" style="font-size: 0.95rem;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inline Monetag Banner Ad Placeholder -->
+        <div class="ad-slot-wrapper">
+            <div class="ad-container-banner" id="ad-heic-banner">
+                <!-- Monetag Code -->
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>HEIC Converter FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">What is a HEIC file?</div>
+                    <div class="faq-answer">
+                        HEIC (High Efficiency Image Container) is Apple's standard photo compression format for iOS. It saves high-quality images at half the file size of JPG, but it is not natively supported by most Windows platforms and web utilities.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How does client-side HEIC conversion work?</div>
+                    <div class="faq-answer">
+                        We load a lightweight decoding library (`heic2any`) via CDN directly in your browser. When you select HEIC files, this library decodes the Apple-encoded picture buffer and translates it to standard PNG/JPEG output. This does not use any internet bandwidth since no files are uploaded to servers.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is it safe to convert private photos here?</div>
+                    <div class="faq-answer">
+                        Yes. Because all photo processing occurs locally on your own computer, your personal photos are never shared, uploaded, or exposed to any website servers or database networks.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <p>&copy; 2026 PyraTools. All rights reserved.</p>
+            <p><a href="index.html">Back to Home Dashboard</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/heic-to-jpg.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD0TFB7QFN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RD0TFB7QFN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyraTools - Free & Private Client-Side Media Tools Hub</title>
+    <meta name="description" content="PyraTools is a 100% private, free online toolbox for converting and compressing images, PDF files, OCR, and social media text formatting without uploading files to any server.">
+    <link rel="canonical" href="https://pyratools.com/">
+    
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="PyraTools - Free & Private Client-Side Media Tools Hub">
+    <meta property="og:description" content="Convert HEIC, WebP, SVG, and PDF files directly in your browser. Fast, free, and 100% private. No server uploads.">
+    <meta property="og:url" content="https://pyratools.com/">
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Monetag Header Integration Placeholder -->
+    <!-- Place your Monetag tags or Anti-Adblock scripts here -->
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234f46e5%22%20/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%239333ea%22%20/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20Gradient%20Triangle%20--%3E%0A%20%20%3Cpolygon%20points%3D%2250%2C12%2090%2C82%2010%2C82%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20White%20Eye%20shape%20cutout%20--%3E%0A%20%20%3Cpath%20d%3D%22M%2030%2C58%20Q%2050%2C40%2070%2C58%20Q%2050%2C76%2030%2C58%20Z%22%20fill%3D%22%23ffffff%22%20/%3E%0A%20%20%3C%21--%20Pupil%20using%20the%20same%20gradient%20--%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2258%22%20r%3D%226.5%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20Small%20white%20shine%20reflection%20inside%20pupil%20--%3E%0A%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2256%22%20r%3D%222%22%20fill%3D%22%23ffffff%22%20/%3E%0A%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Pyra<span>Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="image-compressor.html">Compressor</a></li>
+                <li><a href="heic-to-jpg.html">HEIC Converter</a></li>
+                <li><a href="image-to-pdf.html">Images to PDF</a></li>
+                <li><a href="fancy-fonts.html">Fonts Style</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Private Web Utility Hub</h1>
+            <p>Perform advanced image, PDF, and text modifications locally in your browser. Files never leave your device. Fast, secure, and completely free.</p>
+        </section>
+
+        <!-- Top Monetag Banner Ad Placeholder -->
+        <div class="ad-slot-wrapper">
+            <div class="ad-container-banner" id="ad-top-banner">
+                <!-- Monetag 728x90 Banner Code Goes Here -->
+            </div>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="filter-bar">
+            <div class="search-wrapper">
+                <input type="text" id="tool-search" class="search-input" placeholder="Search for tools (e.g. PDF, HEIC, Font)..." aria-label="Search tools">
+            </div>
+            <div class="filter-tags" id="category-filters">
+                <button class="filter-btn active" data-category="all">All Tools</button>
+                <button class="filter-btn" data-category="image">Image Tools</button>
+                <button class="filter-btn" data-category="pdf">PDF Tools</button>
+                <button class="filter-btn" data-category="social">Social & Text</button>
+            </div>
+        </div>
+
+        <!-- Tools Grid Dashboard -->
+        <section class="tools-grid" id="tools-container">
+            
+            <!-- HEIC to JPG -->
+            <article class="tool-card" data-category="image" data-keywords="heic, jpg, png, iphone, apple, convert">
+                <span class="tool-icon">📱</span>
+                <h3 class="tool-title">HEIC to JPG Converter</h3>
+                <p class="tool-desc">Convert iOS HEIC photos to JPG or PNG format client-side instantly. Supports bulk conversion.</p>
+                <a href="heic-to-jpg.html" class="tool-action">Convert HEIC →</a>
+            </article>
+
+            <!-- Image Compressor -->
+            <article class="tool-card" data-category="image" data-keywords="compress, resize, image, png, jpg, quality">
+                <span class="tool-icon">🖼️</span>
+                <h3 class="tool-title">Smart Image Compressor</h3>
+                <p class="tool-desc">Reduce the file size of your JPG, PNG, or WebP images while maintaining perfect visual quality.</p>
+                <a href="image-compressor.html" class="tool-action">Compress Image →</a>
+            </article>
+
+            <!-- WebP Converter -->
+            <article class="tool-card" data-category="image" data-keywords="webp, png, jpg, format, convert">
+                <span class="tool-icon">🌐</span>
+                <h3 class="tool-title">WebP Converter</h3>
+                <p class="tool-desc">Convert WebP images to standard JPG/PNG, or convert your JPG/PNG files to next-gen WebP format.</p>
+                <a href="webp-converter.html" class="tool-action">Convert WebP →</a>
+            </article>
+
+            <!-- SVG to PNG -->
+            <article class="tool-card" data-category="image" data-keywords="svg, png, jpg, vector, raster, convert">
+                <span class="tool-icon">📐</span>
+                <h3 class="tool-title">SVG to PNG Converter</h3>
+                <p class="tool-desc">Render vector SVG files into high-resolution PNG or JPG raster images with adjustable sizes.</p>
+                <a href="svg-to-png.html" class="tool-action">Convert SVG →</a>
+            </article>
+
+            <!-- Image to PDF -->
+            <article class="tool-card" data-category="pdf" data-keywords="pdf, image, jpg, png, combine, merge">
+                <span class="tool-icon">📄</span>
+                <h3 class="tool-title">Image to PDF Converter</h3>
+                <p class="tool-desc">Combine multiple JPG, PNG or WebP images into a single clean PDF file with customizable formatting.</p>
+                <a href="image-to-pdf.html" class="tool-action">Create PDF →</a>
+            </article>
+
+            <!-- PDF to Image -->
+            <article class="tool-card" data-category="pdf" data-keywords="pdf, image, extract, png, jpg, pages">
+                <span class="tool-icon">📷</span>
+                <h3 class="tool-title">PDF to Image Converter</h3>
+                <p class="tool-desc">Extract all pages of a PDF document as high-quality individual JPG or PNG images.</p>
+                <a href="pdf-to-image.html" class="tool-action">Extract Images →</a>
+            </article>
+
+            <!-- PDF Compressor -->
+            <article class="tool-card" data-category="pdf" data-keywords="pdf, compress, size, reduce, document">
+                <span class="tool-icon">🗜️</span>
+                <h3 class="tool-title">PDF Compressor</h3>
+                <p class="tool-desc">Reduce the size of image-heavy PDF documents directly inside your browser without quality loss.</p>
+                <a href="pdf-compress.html" class="tool-action">Compress PDF →</a>
+            </article>
+
+            <!-- Image to Text -->
+            <article class="tool-card" data-category="social" data-keywords="ocr, text, image, scan, copy, extract">
+                <span class="tool-icon">🔍</span>
+                <h3 class="tool-title">Image to Text OCR</h3>
+                <p class="tool-desc">Extract text from scanned images or screenshots using client-side OCR technology.</p>
+                <a href="image-to-text.html" class="tool-action">Extract Text →</a>
+            </article>
+
+            <!-- Fancy Fonts -->
+            <article class="tool-card" data-category="social" data-keywords="fonts, fancy, cool, copy, paste, text, bio, instagram">
+                <span class="tool-icon">✨</span>
+                <h3 class="tool-title">Fancy Fonts Generator</h3>
+                <p class="tool-desc">Generate over 30 fancy and cool text styles for your Instagram bio, Pubg, or Discord profiles.</p>
+                <a href="fancy-fonts.html" class="tool-action">Style Text →</a>
+            </article>
+
+            <!-- Bio Spacer -->
+            <article class="tool-card" data-category="social" data-keywords="spacer, line break, instagram, spacer, bio">
+                <span class="tool-icon">✍️</span>
+                <h3 class="tool-title">Instagram Bio Spacer</h3>
+                <p class="tool-desc">Add clean line breaks and spaces to your Instagram bios and captions without formatting issues.</p>
+                <a href="bio-spacer.html" class="tool-action">Format Bio →</a>
+            </article>
+
+        </section>
+
+        <!-- Bottom Monetag Square Ad Placement -->
+        <div class="ad-slot-wrapper">
+            <div class="ad-container-square" id="ad-mid-square">
+                <!-- Monetag 300x250 Banner Code Goes Here -->
+            </div>
+        </div>
+
+        <!-- SEO FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                
+                <div class="faq-item">
+                    <div class="faq-question">What is PyraTools?</div>
+                    <div class="faq-answer">
+                        PyraTools is a comprehensive web utility hub containing 10+ free, in-browser micro-tools. You can convert, compress, and edit images, documents, PDFs, and text formats instantly.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Are my uploaded files safe?</div>
+                    <div class="faq-answer">
+                        Yes, 100%! Unlike other conversion sites, PyraTools runs entirely on client-side JavaScript. This means your files are processed locally inside your web browser and are never uploaded to any external server. Your data remains fully secure on your own device.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Is it completely free?</div>
+                    <div class="faq-answer">
+                        Yes, all tools on PyraTools are completely free to use without registration, subscriptions, or watermarks. There are no daily limits on conversions.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Do these tools work on mobile phones?</div>
+                    <div class="faq-answer">
+                        Absolutely! PyraTools is built with a responsive mobile-first design, making it fully functional on Android devices, iPhones, tablets, and desktop computers.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo">Pyra<span>Tools</span></div>
+                <p>An SEO optimized web utility toolbox focusing on privacy-first browser tools. No server costs, 100% secure.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Image Tools</h4>
+                    <ul>
+                        <li><a href="heic-to-jpg.html">HEIC to JPG</a></li>
+                        <li><a href="image-compressor.html">Image Compressor</a></li>
+                        <li><a href="webp-converter.html">WebP Converter</a></li>
+                        <li><a href="svg-to-png.html">SVG to PNG</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>PDF & Social</h4>
+                    <ul>
+                        <li><a href="image-to-pdf.html">Image to PDF</a></li>
+                        <li><a href="pdf-to-image.html">PDF to Image</a></li>
+                        <li><a href="image-to-text.html">Image to Text OCR</a></li>
+                        <li><a href="fancy-fonts.html">Fancy Fonts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 PyraTools. All rights reserved.</p>
+            <p>Privacy Policy | Terms of Service</p>
+        </div>
+    </footer>
+
+    <!-- Shared JS -->
+    <script src="js/main.js"></script>
+    
+    <!-- Page Specific Script for Dynamic Filtering & Search -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('tool-search');
+            const categoryButtons = document.querySelectorAll('#category-filters .filter-btn');
+            const cards = document.querySelectorAll('.tool-card');
+
+            let activeCategory = 'all';
+            let searchQuery = '';
+
+            function filterTools() {
+                cards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    const keywords = card.getAttribute('data-keywords') || '';
+                    const title = card.querySelector('.tool-title').textContent.toLowerCase();
+                    const desc = card.querySelector('.tool-desc').textContent.toLowerCase();
+                    
+                    const matchesCategory = (activeCategory === 'all' || category === activeCategory);
+                    
+                    const query = searchQuery.trim().toLowerCase();
+                    const matchesSearch = !query || 
+                        title.includes(query) || 
+                        desc.includes(query) || 
+                        keywords.includes(query);
+
+                    if (matchesCategory && matchesSearch) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+
+            // Search input handler
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value;
+                filterTools();
+            });
+
+            // Category filter handler
+            categoryButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    categoryButtons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeCategory = btn.getAttribute('data-category');
+                    filterTools();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

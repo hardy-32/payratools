@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RD0TFB7QFN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RD0TFB7QFN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compress PDF Online - Reduce PDF File Size Privately - PyraTools</title>
+    <meta name="description" content="Reduce the file size of your PDF documents online for free. Compress image-heavy and scanned PDFs directly in your browser. 100% private.">
+    <link rel="canonical" href="https://pyratools.com/pdf-compress.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compress PDF Online - Reduce PDF File Size Privately">
+    <meta property="og:description" content="Compress your PDF files in your browser without uploading. High quality reduction.">
+    <meta property="og:url" content="https://pyratools.com/pdf-compress.html">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- CDNs: PDF.js and jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <!-- SEO JSON-LD Markup Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "PyraTools PDF Compressor",
+      "operatingSystem": "All",
+      "applicationCategory": "MultimediaApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22grad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234f46e5%22%20/%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%239333ea%22%20/%3E%0A%20%20%20%20%3C/linearGradient%3E%0A%20%20%3C/defs%3E%0A%20%20%3C%21--%20Gradient%20Triangle%20--%3E%0A%20%20%3Cpolygon%20points%3D%2250%2C12%2090%2C82%2010%2C82%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20White%20Eye%20shape%20cutout%20--%3E%0A%20%20%3Cpath%20d%3D%22M%2030%2C58%20Q%2050%2C40%2070%2C58%20Q%2050%2C76%2030%2C58%20Z%22%20fill%3D%22%23ffffff%22%20/%3E%0A%20%20%3C%21--%20Pupil%20using%20the%20same%20gradient%20--%3E%0A%20%20%3Ccircle%20cx%3D%2250%22%20cy%3D%2258%22%20r%3D%226.5%22%20fill%3D%22url%28%23grad%29%22%20/%3E%0A%20%20%3C%21--%20Small%20white%20shine%20reflection%20inside%20pupil%20--%3E%0A%20%20%3Ccircle%20cx%3D%2252%22%20cy%3D%2256%22%20r%3D%222%22%20fill%3D%22%23ffffff%22%20/%3E%0A%3C/svg%3E">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Pyra<span>Tools</span></a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="image-compressor.html">Compressor</a></li>
+                <li><a href="heic-to-jpg.html">HEIC Converter</a></li>
+                <li><a href="image-to-pdf.html">Images to PDF</a></li>
+                <li><a href="fancy-fonts.html">Fonts Style</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Workspace -->
+    <main>
+        <div class="tool-workspace">
+            <div class="workspace-card">
+                <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center;">Smart PDF Compressor</h1>
+                <p style="color: var(--text-muted); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;">Reduce the file size of image-heavy and scanned PDF documents locally in your browser.</p>
+
+                <!-- Drag and Drop Zone -->
+                <div class="drop-zone" id="drop-zone">
+                    <span class="drop-zone-icon">🗜️</span>
+                    <p class="drop-zone-text">Drag & drop your PDF file here or click to browse</p>
+                    <p class="drop-zone-subtext">Supports PDF documents (Max 25MB)</p>
+                    <input type="file" id="file-input" class="file-input" accept="application/pdf">
+                </div>
+
+                <!-- Controls Panel -->
+                <div class="controls-panel" id="controls-panel" style="display: none;">
+                    <div class="control-row">
+                        <div class="control-group">
+                            <label for="compression-level">Compression Level:</label>
+                            <select id="compression-level" class="control-select">
+                                <option value="low">Low Compression (Highest Image Quality)</option>
+                                <option value="medium" selected>Medium Compression (Balanced Quality & Size)</option>
+                                <option value="high">High Compression (Minimum File Size)</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="pdf-filename">Custom PDF File Name (Optional):</label>
+                            <input type="text" id="pdf-filename" class="control-input" placeholder="e.g. my-compressed-document">
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="compress-btn" style="margin-top: 1rem;">Compress PDF File</button>
+                </div>
+
+                <!-- Files List Previews -->
+                <div class="files-list" id="files-list"></div>
+
+                <!-- Progress Loading Bar -->
+                <div class="progress-container" id="progress-container">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-status" id="progress-status">Optimizing pages...</div>
+
+                <!-- Results Output Panel -->
+                <div class="result-panel" id="result-panel" style="display: none;">
+                    <div class="result-header">
+                        <h4 class="result-title">🎉 PDF Compression Completed!</h4>
+                        <a href="#" class="btn btn-primary" id="download-pdf-btn" style="width: auto; padding: 0.5rem 1.25rem;">Download PDF</a>
+                    </div>
+                    <p id="savings-summary" style="font-size: 0.95rem;"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inline Monetag Banner Ad Placeholder -->
+        <div class="ad-slot-wrapper">
+            <div class="ad-container-banner" id="ad-pdf-compress-banner">
+                <!-- Monetag Code -->
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>PDF Compressor FAQ</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">How does local PDF compression work?</div>
+                    <div class="faq-answer">
+                        If a PDF contains high-resolution scanned pages or graphics, it can be extremely bulky. Our tool uses PDF.js to render each page onto a canvas, rescales it based on your chosen level (Low/Medium/High compression), adjusts JPEG compression ratios, and packages it into a brand new optimized PDF using jsPDF.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Will text-based PDFs compress?</div>
+                    <div class="faq-answer">
+                        This local canvas-based compressor is highly optimized for **scanned PDFs, invoices, receipts, and image-heavy documents**. Text-only PDFs (like pure ebooks or word exports) are already very small and might not see significant compression.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is the quality of my PDF compromised?</div>
+                    <div class="faq-answer">
+                        Medium compression yields a perfect balance where text remains clear and readable while cutting the size by 40-70%. High compression is best when you need to meet strict upload limits (like 2MB portals) and can tolerate slightly softer images.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="nav-container" style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--text-muted); flex-wrap: wrap; gap: 1rem; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            <p>&copy; 2026 PyraTools. All rights reserved.</p>
+            <p><a href="index.html">Back to Home Dashboard</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/pdf-compress.js"></script>
+</body>
+</html>
