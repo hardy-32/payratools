@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copy to clipboard
     copyTextDownloader = () => {
-        window.open('https://omg10.com/4/11247708', '_blank');
+        window.open('https://www.effectivecpmnetwork.com/uheptqp6pg?key=4c2ab143ab572ae85a152c3bf418e185', '_blank');
         extractedTextarea.select();
         extractedTextarea.setSelectionRange(0, 99999); // mobile support
         

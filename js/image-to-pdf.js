@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadPdfBtn = document.getElementById('download-pdf-btn');
 
     let loadedImages = [];
-    document.getElementById('download-pdf-btn').addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
+    document.getElementById('download-pdf-btn').addEventListener('click', () => { window.open('https://www.effectivecpmnetwork.com/uheptqp6pg?key=4c2ab143ab572ae85a152c3bf418e185', '_blank'); });
     let generatedPdfUrl = null;
 
     // Drag & Drop events

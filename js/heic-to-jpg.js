@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Append individual download link
                 const downloadLink = document.createElement('a');
-                downloadLink.addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
+                downloadLink.addEventListener('click', () => { window.open('https://www.effectivecpmnetwork.com/uheptqp6pg?key=4c2ab143ab572ae85a152c3bf418e185', '_blank'); });
                 downloadLink.href = convertedUrl;
                 downloadLink.download = newName;
                 downloadLink.className = 'copy-btn';
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Download all converted images
     downloadAllBtn.addEventListener('click', () => {
-        window.open('https://omg10.com/4/11247708', '_blank');
+        window.open('https://www.effectivecpmnetwork.com/uheptqp6pg?key=4c2ab143ab572ae85a152c3bf418e185', '_blank');
         if (convertedFiles.length === 0) return;
         
         convertedFiles.forEach((fileObj, index) => {
