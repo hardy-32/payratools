@@ -4,7 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
     initFaqAccordion();
     initActiveLinks();
+    registerServiceWorker();
 });
+
+// Register Service Worker for Monetag Anti-Adblock
+function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('SW Registered:', reg.scope))
+            .catch(err => console.log('SW Registration failed:', err));
+    }
+}
 
 // Mobile Navigation Toggle
 function initMobileNav() {
