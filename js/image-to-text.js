@@ -162,6 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Copy to clipboard
     copyTextDownloader = () => {
+        window.open('https://omg10.com/4/11247708', '_blank');
         extractedTextarea.select();
         extractedTextarea.setSelectionRange(0, 99999); // mobile support
         

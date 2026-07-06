@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 statusLabel.className = 'file-status success';
                 
                 const downloadLink = document.createElement('a');
+                downloadLink.addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
                 downloadLink.href = renderedResult.url;
                 downloadLink.download = renderedResult.name;
                 downloadLink.className = 'copy-btn';
@@ -252,6 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Bulk download
     downloadAllBtn.addEventListener('click', () => {
+        window.open('https://omg10.com/4/11247708', '_blank');
         if (convertedFiles.length === 0) return;
         
         convertedFiles.forEach((fileObj, index) => {

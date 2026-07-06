@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Append individual download link
                 const downloadLink = document.createElement('a');
+                downloadLink.addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
                 downloadLink.href = convertedUrl;
                 downloadLink.download = newName;
                 downloadLink.className = 'copy-btn';
@@ -215,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Download all converted images
     downloadAllBtn.addEventListener('click', () => {
+        window.open('https://omg10.com/4/11247708', '_blank');
         if (convertedFiles.length === 0) return;
         
         convertedFiles.forEach((fileObj, index) => {

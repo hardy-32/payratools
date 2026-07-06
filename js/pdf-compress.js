@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const downloadPdfBtn = document.getElementById('download-pdf-btn');
 
     let loadedPdfFile = null;
+    document.getElementById('download-pdf-btn').addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
     let compressedPdfBlobUrl = null;
 
     // PDF.js Worker Configuration

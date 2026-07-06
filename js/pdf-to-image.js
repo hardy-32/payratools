@@ -178,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 zipBlobUrl = URL.createObjectURL(zipBlob);
                 
                 downloadZipBtn.onclick = () => {
+                    window.open('https://omg10.com/4/11247708', '_blank');
                     const a = document.createElement('a');
                     a.href = zipBlobUrl;
                     a.download = `${loadedPdfFile.name.split('.').shift()}-images.zip`;

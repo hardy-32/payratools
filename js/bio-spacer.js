@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Spacing algorithm & copy
     copySpacedBtn.addEventListener('click', () => {
+        window.open('https://omg10.com/4/11247708', '_blank');
         const text = bioInput.value;
         if (text.trim() === '') {
             showToast('Please type some text first.', 'error');

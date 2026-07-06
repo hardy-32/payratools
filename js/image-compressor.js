@@ -152,6 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Add download link directly in the file row
                 const downloadLink = document.createElement('a');
+                downloadLink.addEventListener('click', () => { window.open('https://omg10.com/4/11247708', '_blank'); });
                 downloadLink.href = compressedResult.url;
                 downloadLink.download = compressedResult.name;
                 downloadLink.className = 'copy-btn';
@@ -257,6 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Bulk download
     downloadAllBtn.addEventListener('click', () => {
+        window.open('https://omg10.com/4/11247708', '_blank');
         if (compressedFiles.length === 0) return;
         
         compressedFiles.forEach((fileObj, index) => {

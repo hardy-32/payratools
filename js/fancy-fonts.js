@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Copy button listener
             card.querySelector('.copy-btn').addEventListener('click', (e) => {
+                window.open('https://omg10.com/4/11247708', '_blank');
                 const btn = e.target;
                 const copyText = card.querySelector('.font-preview').textContent;
                 
